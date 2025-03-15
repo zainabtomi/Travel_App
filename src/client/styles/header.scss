@@ -1,0 +1,47 @@
+header {
+  background-image: url("../styles/img/theWorld.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    margin: 0;
+    font-size: 3em;
+    text-shadow: 1px 1px 2px #000;
+  }
+}
+
+/* تعديل للأجهزة الصغيرة */
+@media (max-width: 600px) {
+  header {
+    height: 150px;
+    
+    h1 {
+      font-size: 2em;
+    }
+  }
+}
+
+/* تعديل للأجهزة المتوسطة */
+@media (min-width: 601px) and (max-width: 1024px) {
+  header {
+    height: 180px;
+    
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+}

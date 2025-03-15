@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- تحديد إعدادات العرض لتناسب الأجهزة المحمولة -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="styles/responsive_design.css" />
+    <title>Travel Planner</title>
+    <script defer src="bundle.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Travel Planner</h1>
+    </header>
+    
+    <div id="app">
+      <!-- نموذج إدخال معلومات الرحلة -->
+      <form id="myform">
+        <!-- حقل إدخال للوجهة -->
+        <label for="location">Destination: </label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          placeholder="Enter your destination, Like Nablus"
+          required
+        />
+        <!-- حقل إدخال لتاريخ البداية -->
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" name="start-date" required />
+        <!-- حقل إدخال لتاريخ العودة -->
+        <label for="return-date">Return Date:</label>
+        <input type="date" id="return-date" name="return-date" required />
+        <!-- زر إرسال النموذج -->
+        <button type="submit">Get Your Trip Details</button>
+      </form>
+      
+      <!-- قسم لعرض تفاصيل الرحلة بعد المعالجة -->
+      <div id="details"></div>
+      <!-- قسم لعرض معلومات الموقع بعد المعالجة -->
+      <div id="locationInfo"></div>
+    </div>
+    
+    <!-- تذييل الصفحة -->
+    <footer>
+      <p>zainab tomi&copy; mar.2025</p>
+    </footer>
+    
+    <!-- التسجيل لـ Service Worker لتحسين أداء التطبيق والعمل دون اتصال الإنترنت -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+    </script>
+  </body>
+</html>
+
